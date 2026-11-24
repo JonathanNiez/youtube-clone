@@ -17,9 +17,16 @@ export default function Navbar({ onMenuClick }) {
         </Link>
       </div>
       <div className="flex items-center gap-2">
-        <div className="flex w-full text-sm border border-gray-300">
-          <input type="text" placeholder="Search" className="p-2" />
-          <button className="hover:bg-gray-200">
+        <div className="flex flex-1 text-sm">
+          <input
+            type="text"
+            placeholder="Search"
+            className="border border-gray-300 p-2 rounded-tl-full rounded-bl-full"
+          />
+          <button
+            className="border bg-gray-200 border-gray-300 px-4 
+          hover:bg-gray-300 hover:cursor-pointer rounded-br-full rounded-tr-full"
+          >
             <img src="/icons/search.svg" alt="Search" width={20} />
           </button>
         </div>
@@ -40,8 +47,7 @@ export default function Navbar({ onMenuClick }) {
         <img
           src={"/icons/bell.svg"}
           alt="bell"
-          className=" 
-        rounded-full text-center hover:bg-gray-200 cursor-pointer"
+          className="rounded-full text-center hover:bg-gray-200 cursor-pointer"
           width={25}
           height={25}
         />
