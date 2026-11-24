@@ -45,7 +45,7 @@ export default function Navbar() {
           Bell
         </div>
         <img
-          src="https://avatars.fastly.steamstatic.com/72e44af2e6e31debaa0cd0ca20d36ee7d6eeb4ba_full.jpg"
+          src={"/images/pfp.jpg"}
           className="w-8 h-8 rounded-full hover:bg-gray-200 cursor-pointer"
         />
       </div>
