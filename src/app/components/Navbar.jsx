@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Navbar({ onMenuClick }) {
   return (
-    <div className="flex items-center justify-between gap-2">
+    <div className="flex w-full items-center justify-between gap-2">
       <div className="flex items-center gap-2">
         <button onClick={onMenuClick} className="w-6 h-6 hover:cursor-pointer">
           <img src="/icons/menu.svg" alt="Menu" />
