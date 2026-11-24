@@ -8,12 +8,11 @@ export default function Home() {
         <Link
           key={v.id}
           href={`/video/${v.id}`}
-          className="hover:scale-105 transition-transform"
         >
           <img
             src={v.thumbnail}
             alt={v.title}
-            className="w-full rounded-xl aspect-video object-cover"
+            className="w-full rounded-xl aspect-video object-cover hover:scale-105 transition-transform"
           />
           <h3 className="font-semibold mt-2">{v.title}</h3>
           <p className="text-sm text-gray-600">{v.channel}</p>
