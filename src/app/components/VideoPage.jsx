@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { videos } from "../data/videos";
 
 export default function VideoPage({ id }) {
@@ -29,9 +30,11 @@ export default function VideoPage({ id }) {
             href={`/video/${v.id}`}
             className="flex gap-2 hover:bg-gray-100 py-2 rounded-lg transition-colors"
           >
-            <img
+            <Image
               src={v.thumbnail}
               alt={v.title}
+              width={208}
+              height={117}
               className="w-52 rounded-lg aspect-video object-cover"
             />
             <div>

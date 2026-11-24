@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 export default function Navbar({ onMenuClick }) {
@@ -6,13 +7,14 @@ export default function Navbar({ onMenuClick }) {
     <div className="flex w-full items-center justify-between gap-2">
       <div className="flex items-center gap-2">
         <button onClick={onMenuClick} className="w-6 h-6 hover:cursor-pointer">
-          <img src="/icons/menu.svg" alt="Menu" />
+          <Image src="/icons/menu.svg" alt="Menu" width={24} height={24} />
         </button>
         <Link href="/">
-          <img
+          <Image
             src="https://sa.kapamilya.com/absnews/abscbnnews/media/2017/graphics/youtube-logo-2017.jpg"
             alt="YouTube"
             width={100}
+            height={56}
           />
         </Link>
       </div>
@@ -27,10 +29,10 @@ export default function Navbar({ onMenuClick }) {
             className="border bg-gray-200 border-gray-300 px-4 
           hover:bg-gray-300 hover:cursor-pointer rounded-br-full rounded-tr-full"
           >
-            <img src="/icons/search.svg" alt="Search" width={20} />
+            <Image src="/icons/search.svg" alt="Search" width={20} height={20} />
           </button>
         </div>
-        <img
+        <Image
           src="/icons/mic.png"
           width={15}
           height={15}
@@ -41,19 +43,21 @@ export default function Navbar({ onMenuClick }) {
           className="flex gap-2 items-center justify-center h-4 
         bg-gray-100 p-4 rounded-full text-center hover:bg-gray-200 cursor-pointer"
         >
-          <img src={"/icons/plus.png"} width={15} height={15} />
+          <Image src="/icons/plus.png" width={15} height={15} alt="" />
           <span>Create</span>
         </div>
-        <img
-          src={"/icons/bell.svg"}
+        <Image
+          src="/icons/bell.svg"
           alt="bell"
           className="rounded-full text-center hover:bg-gray-200 cursor-pointer"
           width={25}
           height={25}
         />
-        <img
-          src={"/images/pfp.jpg"}
+        <Image
+          src="/images/pfp.jpg"
           alt="profile"
+          width={32}
+          height={32}
           className="w-8 h-8 rounded-full hover:bg-gray-200 cursor-pointer"
         />
       </div>

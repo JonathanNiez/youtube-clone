@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { videos } from "./data/videos";
 
 export default function Home() {
@@ -9,9 +10,11 @@ export default function Home() {
           key={v.id}
           href={`/video/${v.id}`}
         >
-          <img
+          <Image
             src={v.thumbnail}
             alt={v.title}
+            width={320}
+            height={180}
             className="w-full rounded-xl aspect-video object-cover hover:scale-105 transition-transform"
           />
           <h3 className="font-semibold mt-2">{v.title}</h3>
