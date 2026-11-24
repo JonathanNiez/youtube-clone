@@ -1,23 +1,24 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 
-export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Sidebar({ isOpen }) {
   const pathname = usePathname();
 
   const sideBarItems = [
     {
       name: "Home",
-      href: "/",
+      icon: "/icons/home.svg",
+      link: "/",
     },
     {
       name: "Shorts",
-      href: "/shorts",
+      link: "/shorts",
     },
     {
       name: "Subscriptions",
-      href: "/subscriptions",
+      link: "/subscriptions",
     },
   ];
 
@@ -29,25 +30,21 @@ export default function Sidebar() {
             isOpen ? "w-64 shadow-lg" : "w-16"
           }`}
       >
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="hover:cursor-pointer"
-        >
-          {isOpen ? "Close" : "Open"}
-        </button>
         {isOpen && (
           <ul
-            className={`mt-4 whitespace-nowrap transition-opacity duration-300 ${
+            className={`flex flex-col gap-2 mt-4 w-full whitespace-nowrap transition-opacity duration-300 ${
               isOpen ? "opacity-100 delay-100" : "opacity-0 pointer-events-none"
             }`}
           >
             {sideBarItems.map((item, index) => (
-              <li
-                key={index}
-                className={`p-2 rounded-lg hover:bg-gray-100 hover:cursor-pointer
-                 ${pathname === item.href ? "bg-gray-200" : ""}`}
-              >
-                {item.name}
+              <li key={index}>
+                <Link
+                  href={item.link}
+                  className={`p-2 rounded-lg hover:bg-gray-100 hover:cursor-pointer
+                 ${pathname === item.link ? "bg-gray-200" : ""}`}
+                >
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
