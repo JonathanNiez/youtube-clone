@@ -11,7 +11,7 @@ export default function Navbar({ onMenuClick }) {
         </button>
         <Link href="/">
           <Image
-            src="https://sa.kapamilya.com/absnews/abscbnnews/media/2017/graphics/youtube-logo-2017.jpg"
+            src="/icons/youtube.svg"
             alt="YouTube"
             width={100}
             height={56}
